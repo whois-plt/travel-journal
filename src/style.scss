@@ -1,0 +1,108 @@
+// variables
+
+$lightRed: #f55a5a;
+$text: #2b283a;
+$textGrey: #918e9b;
+$white: #fff;
+$border: #f5f5f5;
+$background: #e5e5e5;
+
+body {
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  background: $background;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+hr {
+  height: 1px;
+  background: $border;
+  border: none;
+  margin: 18px 0;
+}
+
+.journal--location,
+.journal--map-link,
+.journal--date,
+.journal--desc {
+  font-size: 11px;
+}
+
+.jorunal {
+  max-width: 550px;
+  margin: 2em auto;
+  background: $white;
+}
+
+header {
+  background: $lightRed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1em 2em;
+  & p {
+    color: $white;
+    text-transform: lowercase;
+  }
+}
+
+.journal--wrapper {
+  padding: 3rem 2rem;
+  & .journal--card {
+    display: flex;
+    gap: 20px;
+  }
+  & .jorunal--img {
+    max-width: 125px;
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  & .journal--desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & .journal--location-info-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    & .journal--pin {
+      width: 7px;
+      margin-right: 4px;
+    }
+    & .journal--location {
+      margin-right: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    & .journal--map-link {
+      color: $textGrey;
+      text-underline-offset: 3px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  & .journal--title {
+    margin-bottom: 1rem;
+  }
+  & span {
+    font-weight: 700;
+  }
+  & .journal--desc {
+    margin-top: 0.5rem;
+  }
+}
